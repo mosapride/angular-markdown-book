@@ -1,0 +1,48 @@
+body {
+  counter-reset: _c_h2 0;
+  counter-reset: _c_h3 0;
+  counter-reset: _c_h4 0;
+  counter-reset: _c_h5 0;
+}
+
+
+h2::before {
+  content: counter(_c_h2) ". ";
+}
+
+h2 {
+  counter-increment: _c_h2 1;
+  counter-reset: _c_h3 0;
+}
+
+h3::before {
+  content: counter(_c_h2) "." counter(_c_h3) ". ";
+}
+
+h3 {
+  counter-increment: _c_h3;
+  counter-reset: _c_h4 0;
+}
+
+h4::before {
+  content: counter(_c_h2) "." counter(_c_h3) "." counter(_c_h4) ". ";
+}
+
+h4 {
+  counter-increment: _c_h4;
+  counter-reset: _c_h5 0;
+}
+
+h5::before {
+  content: counter(_c_h2) "." counter(_c_h3) "." counter(_c_h4) "." counter(_c_h5) ". ";
+}
+
+h5 {
+  counter-increment: _c_h5;
+}
+
+
+code {
+  background-color: #ffff96;
+  padding: 0 1px 0;
+}

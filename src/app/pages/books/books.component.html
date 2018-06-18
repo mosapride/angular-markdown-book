@@ -1,0 +1,22 @@
+<div class="contents-area">
+  <div [innerHTML]='nowContents'></div>
+</div>
+
+
+
+<!-- left -->
+<div class="left-area" (click)="clickPageMove(-1)">
+  <div class="icon">◀</div>
+</div>
+
+<!-- right -->
+<div class="right-area"  (click)="clickPageMove(1)">
+  <div class="icon">▶</div>
+</div>
+
+<!-- slider -->
+<div class="slider-area">
+  <input type="range" min="{{slider.min}}" max="{{slider.max}}" class="slider" id="myRange" [(ngModel)]="slider.value" (ngModelChange)="changePage($event)">
+  <!-- value="{{slider.value}}"  -->
+  <div class="page-counter">{{slider.value}}/{{slider.max}}</div>
+</div>
