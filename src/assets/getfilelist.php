@@ -1,6 +1,6 @@
 <?php
 $result = array();
-$cdir = scandir(dirname(__FILE__  . "/markdown"));
+$cdir = scandir(dirname(__FILE__)  . "/markdown");
 
 foreach ($cdir as $key => $value) {
     if (!in_array($value, array(".",".."))) {
